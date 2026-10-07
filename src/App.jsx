@@ -311,6 +311,7 @@ export default function App() {
               onClick={() => setDeployModalOpen(true)}
               className="hidden sm:flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 hover:bg-indigo-500/20 transition-all"
               title="Guia de Deploy no GitHub Pages"
+              hidden = "true"
             >
               <FolderGit2 className="w-3.5 h-3.5 text-indigo-400" />
               <span>Deploy GitHub</span>
@@ -602,7 +603,7 @@ export default function App() {
                 }`}
               >
                 <stat.icon className={`w-6 h-6 mb-3 ${stat.color}`} />
-                <div className="text-2xl sm:text-3xl font-extrabold text-slate-100">{stat.number}</div>
+                <div className={`text-2xl sm:text-3xl font-extrabold ${darkMode ? 'text-slate-100':'text-slate-400'}`}>{stat.number}</div>
                 <div className={`text-xs sm:text-sm mt-1 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>{stat.label}</div>
               </div>
             ))}
@@ -643,7 +644,7 @@ export default function App() {
                     <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
                       <IconComp className="w-5 h-5" />
                     </div>
-                    <h3 className="font-bold text-lg text-slate-100">{cat.title}</h3>
+                    <h3 className={`font-bold text-lg ${darkMode ?'text-slate-100':'text-slate-400'}`}>{cat.title}</h3>
                   </div>
 
                   <div className="space-y-3">
@@ -721,7 +722,7 @@ export default function App() {
                     </button>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-100 group-hover:text-cyan-300 transition-colors">
+                  <h3 className={`text-xl font-bold text-slate-100 group-hover:text-cyan-300 transition-colors ${darkMode ? 'text-slate-200' : 'text-slate-400'}`}>
                     {project.title}
                   </h3>
 
@@ -796,7 +797,7 @@ export default function App() {
                 }`}>
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                     <div>
-                      <h3 className="text-lg font-bold text-slate-100">{exp.role}</h3>
+                      <h3 className={`text-lg font-bold ${darkMode? 'text-slate-100':'text-slate-400'}`}>{exp.role}</h3>
                       <div className="text-xs sm:text-sm text-cyan-400 font-semibold">{exp.company}</div>
                     </div>
                     <span className="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700/50 w-fit">
@@ -853,7 +854,7 @@ export default function App() {
                   <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 uppercase tracking-wider">
                     {edu.type}
                   </span>
-                  <h4 className={`font-bold ${darkMode ? 'text-slate-100':'text-slate-600'} mt-2`}>{edu.degree}</h4>
+                  <h4 className={`font-bold ${darkMode ? 'text-slate-100':'text-slate-400'} mt-2`}>{edu.degree}</h4>
                   <p className="text-xs text-slate-400 mt-1">{edu.institution} • {edu.year}</p>
                 </div>
               ))}
@@ -875,7 +876,7 @@ export default function App() {
                     }`}
                   >
                     <div>
-                      <h4 className={`font-bold ${darkMode ? 'text-slate-100':'text-slate-600'} mt-2`}>{cert.name}</h4>
+                      <h4 className={`font-bold ${darkMode ? 'text-slate-100':'text-slate-400'} mt-2`}>{cert.name}</h4>
                       <p className="text-[11px] text-slate-400 mt-1">{cert.issuer}</p>
                     </div>
                     <span className="text-[10px] font-mono text-cyan-400 mt-3">{cert.code}</span>
@@ -1195,7 +1196,7 @@ jobs:
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <div className="flex items-center gap-2">
             <BarChart3 className="w-4 h-4 text-cyan-400" />
-            <span className="font-semibold text-slate-200">Data.Analyst Portfolio © 2026</span>
+            <span className={`font-semibold ${darkMode? 'text-slate-200':'text-slate-800' } `}>Data.Analyst Portfolio © 2026</span>
           </div>
 
           <p>Construído com React, Tailwind CSS e Engenharia de Dados.</p>
