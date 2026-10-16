@@ -302,6 +302,20 @@ export default function App() {
                 {sec.label}
               </button>
             ))}
+                 {/* Novo Botão de Blog (Desktop) */}
+            <a
+              href="https://dev.to/quelvindev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-3 py-1.5 rounded-md text-sm font-semibold transition-all flex items-center gap-1.5 ${
+                darkMode
+                  ? 'text-slate-400 hover:text-cyan-400 hover:bg-slate-800/50'
+                  : 'text-slate-600 hover:text-cyan-600 hover:bg-slate-100'
+              }`}
+            >
+              <span>Blog</span>
+              <ExternalLink className="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400" />
+            </a>
           </nav>
 
           {/* Action Header Items */}
