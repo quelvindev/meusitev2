@@ -930,7 +930,7 @@ export default function App() {
               }`}>
                 <Globe className="w-5 h-5 text-emerald-400" />
                 <h3 className={`text-sm font-semibold ${darkMode ? 'text-slate-200':'text-slate-400'}`}>Localização</h3>
-                <p className="text-xs text-slate-400">São Paulo / Remoto (Brasil & Internacional)</p>
+                <p className="text-xs text-slate-400">Feira de Santana / Remoto (Brasil & Internacional)</p>
               </div>
 
               <div className={`p-5 rounded-2xl border space-y-2 ${
@@ -938,7 +938,7 @@ export default function App() {
               }`}>
                 <GithubIcon className="w-5 h-5 text-indigo-400" />
                 <h3 className={`text-sm font-semibold ${darkMode ? 'text-slate-200':'text-slate-400'}`}>GitHub & Redes</h3>
-                <p className="text-xs text-slate-400">github.com/analistadados</p>
+                <p className="text-xs text-slate-400">github.com/quelvindev</p>
               </div>
             </div>
 
@@ -1216,7 +1216,7 @@ jobs:
           <p>Construído com React, Tailwind CSS e Engenharia de Dados.</p>
 
           <div className="flex items-center gap-4">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">
+            <a href="https://github.com/quelvindev" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">
               <GithubIcon className="w-4 h-4" />
             </a>
             <a href="#hero" onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }} className="hover:text-cyan-400 transition-colors">
